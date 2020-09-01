@@ -56,6 +56,14 @@
     .header-right {
         float: right;
     }
+
+    .perfil {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        box-shadow: 0 4px 7px 1px #ccc;
+    }
 </style>
 
 <body>
@@ -67,14 +75,14 @@
             <a href="cadastros.html">Cadastros</a>
             <a href="relatorios.html">Relatórios</a>
             <a class="pg-ativa" href="#">Perfil</a>
-            <a href="#">Sair</a>
+            <a href="#" title="Sair">✖</a>
         </div>
     </div>
 
 
 
     <aside>
-        <img src="img/spider.jpg" alt="" width="200">
+        <img class="perfil" src="img/spider.jpg" alt="">
         <h3>Nome</h3>
         Henrique
         <h3>Usuário</h3>
