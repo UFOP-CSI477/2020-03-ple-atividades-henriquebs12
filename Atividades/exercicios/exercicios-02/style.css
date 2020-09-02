@@ -161,6 +161,9 @@ body.inicio {
     height: 100%;
 }
 
+.welcome-hero {
+    max-width: 750px;
+}
 
 .welcome h3 {
     color: white;
@@ -171,7 +174,7 @@ body.inicio {
 .welcome h2 {
     font-family: 'Roboto Mono', monospace;
     color: white;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: normal;
 
 }
