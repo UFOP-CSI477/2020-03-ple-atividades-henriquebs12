@@ -1,100 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu perfil</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    .header {
-        overflow: hidden;
-        background-color: #f1f1f1;
-        padding: 20px 10px;
-    }
-
-    .header a {
-        float: left;
-        color: #131313;
-        text-align: center;
-        padding: 12px 24px;
-        text-decoration: none;
-        margin: 0 5px;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-        border-radius: 4px;
-        transition: all ease 200ms;
-    }
-
-    .header a.logo {
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .header a:hover {
-        background-color: #ddd;
-        color: #131313;
-    }
-
-    .header a:active {
-        background-color: #b2b2b2;
-    }
-
-    .header a.pg-ativa {
-        background-color: #ff2d55;
-        color: white;
-    }
-
-    .header-right {
-        float: right;
-    }
-
-    .perfil {
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        box-shadow: 0 4px 7px 1px #ccc;
-    }
-</style>
 
 <body>
 
-    <div class="header">
+    <nav class="header">
         <a href="#" class="logo">Exercício 02</a>
         <div class="header-right">
             <a href="inicio.html">Início</a>
-            <a href="cadastros.html">Cadastros</a>
+            <a href="cadastros.html">Cadastrar</a>
             <a href="relatorios.html">Relatórios</a>
             <a class="pg-ativa" href="#">Perfil</a>
             <a href="#" title="Sair">✖</a>
         </div>
-    </div>
+    </nav>
 
+    <main>
 
+        <div class="container mt">
+            <div class="flex">
+                <div class="img-perfil">
+                    <img src="img/spider.jpg" alt="">
+                </div>
+                <div class="nome">
+                    <h3>Nome</h3>
+                    Peter Parker
+                </div>
+                <div class="usuario">
+                    <h3>Usuário</h3>
+                    spiderman2099
+                </div>
+                <div class="email">
+                    <h3>Email</h3>
+                    spiderman@marvel.com
+                </div>
+                <div class="data-criacao">
+                    <h3>Data de criação</h3>
+                    12/05/1995
+                </div>
+                <div class="ultimo-acesso">
+                    <h3>Último acesso</h3>
+                    Ontem, às 16h
+                </div>
+            </div>
+        </div>
 
-    <aside>
-        <img class="perfil" src="img/spider.jpg" alt="">
-        <h3>Nome</h3>
-        Henrique
-        <h3>Usuário</h3>
-        henriquebs12
-        <h3>Email</h3>
-        spiderman@marvel.com
-        <h3>Data de criação</h3>
-        12/05/1995
-        <h3>Último acesso</h3>
-        Ontem, às 16h
-
-    </aside>
+    </main>
 </body>
 
 </html>
