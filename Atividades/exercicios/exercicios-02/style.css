@@ -3,6 +3,7 @@
 
 html {
     font-family: 'Roboto Mono', monospace;
+
 }
 
 body {
@@ -70,7 +71,6 @@ table tr:hover td {
     background-color: transparent;
 }
 
-
 .header a {
     float: left;
     color: #131313;
@@ -82,11 +82,6 @@ table tr:hover td {
     font-size: 14px;
     line-height: 24px;
     border-radius: 4px;
-    transition: all ease 200ms;
-}
-
-.inicio .header a {
-    color: white;
 }
 
 
@@ -114,6 +109,36 @@ table tr:hover td {
     padding: 0 18px;
 }
 
+.inicio .header {
+    animation: 1s ease-out 0s 1 DeslizaPraBaixo;
+}
+
+.inicio .welcome-hero h3 {
+    opacity: 0;
+    animation: 1s ease-out 700ms 1 DeslizaPraBaixo;
+    animation-fill-mode: forwards;
+}
+
+.inicio .welcome-hero h2 {
+    opacity: 0;
+    animation: 1s ease-out 1s 1 DeslizaPraBaixo;
+    animation-fill-mode: forwards;
+}
+
+/* Olha só esse efeito ao carregar página inicial somente com CSS! :P */
+@keyframes DeslizaPraBaixo {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 .flex {
     display: flex;
     flex-direction: row;
@@ -131,7 +156,6 @@ table tr:hover td {
 }
 
 
-
 .flex h3 {
     margin-top: 0;
 }
@@ -142,42 +166,57 @@ table tr:hover td {
 
 /** Página principal **/
 
+body.inicio {
+    margin: 0
+}
+
 .inicio {
     background-image: url(img/dev-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
-
 }
 
-body.inicio {
-    margin: 0
+.inicio .header a {
+    color: white;
 }
 
+.inicio .header a:hover {
+    background-color: rgb(0 0 0 / 20%);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.inicio .header a:active {
+    background-color: rgb(0 0 0 / 0.15);
+}
+
+.inicio .header a.pg-ativa {
+    background-color: #ff2d55;
+    color: white;
+}
 
 .welcome {
     padding: 0 80px;
     height: 100%;
 }
 
-.welcome-hero {
-    max-width: 750px;
-}
-
 .welcome h3 {
-    color: white;
+    color: rgb(255 255 255 / 0.8);
     margin-bottom: 0;
     font-size: 48px;
+    max-width: 750px;
 }
 
 .welcome h2 {
     font-family: 'Roboto Mono', monospace;
-    color: white;
+    color: rgb(255 255 255 / 0.8);
     font-size: 28px;
     font-weight: normal;
-
+    max-width: 600px;
 }
+
 
 /** Página do perfil **/
 
