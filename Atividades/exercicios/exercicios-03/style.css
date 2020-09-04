@@ -125,8 +125,7 @@ table tr:hover td {
     animation-fill-mode: forwards;
 }
 
-/* Olha só esse efeito ao carregar página inicial somente com CSS!
-Eu já sabia que você iria verificar se eu usei JavaScript:P */
+/* Olha só esse efeito ao carregar página inicial somente com CSS! :P */
 @keyframes DeslizaPraBaixo {
     0% {
         transform: translateY(-20px);
@@ -246,16 +245,6 @@ body.inicio {
 
 
 /** Página do perfil **/
-
-.container {
-    color: #E91E63;
-    background: #e91e6314;
-    max-width: 80%;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 22px #e91e6317;
-    border: 1px solid #e91e6326;
-}
 
 .perfil-info div {
     padding: 24px;
