@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+
+<body>
+
+    <script>
+        function ExtraTerrestre(nome, idade, endereço) {
+            this.nome = nome;
+            this.idade = idade;
+            this.endereço = endereço;
+        }
+
+        function CarregarDados() {
+            var nome = window.prompt("Insira o nome do E.T");
+            var idade = window.prompt("Insira a idade do E.T");
+            var endereço = window.prompt("Insira o endereço do E.T");
+
+
+            document.getElementById("nome").innerHTML = nome;
+            document.getElementById("idade").innerHTML = idade;
+            document.getElementById("endereço").innerHTML = endereço;
+        }
+    </script>
+
+
+    <center>
+        <input type="button" onclick="CarregarDados()" value="Iniciar pesquisa"></input>
+
+        <table width="500">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Endereço</th>
+            </tr>
+            <tr>
+                <td id="nome"></td>
+                <td id="idade"></td>
+                <td id="endereço"></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
