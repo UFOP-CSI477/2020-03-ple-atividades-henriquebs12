@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+
+    <title>Início</title>
+
+
+    <script>
+        function CarregaDoForm() {
+            const nome = document.FormDados.nome.value;
+            const sobrenome = document.FormDados.sobrenome.value;
+            const rua = document.FormDados.rua.value;
+            const senhabanco = document.FormDados.senhabanco.value;
+
+            window.alert(`
+            Nome carregado com sucesso: ${nome} ${sobrenome}
+            No seguinte endereço: ${rua}
+            Não esqueça sua senha do banco: ${senhabanco}`);
+
+            let obj = {
+                name: nome,
+                lastname: sobrenome,
+                password: senhabanco,
+                address: {
+                    street: rua
+                }
+            };
+            console.log(obj);
+        }
+    </script>
+
+
+
+
+</head>
+
+<body class="inicio">
+
+
+    <center>
+        <div class="w-25">
+
+            <h2 class="text-left mt-5">Faça seu cadastro:</h2>
+            <form action="post" name="FormDados">
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="number" name="senhabanco" placeholder="Digite a senha do cartão">
+                </div>
+                <div class="form-group my-2">
+                    <input class="form-control" type="text" name="rua" placeholder="Digite seu endereço">
+                </div>
+
+                <button type="button" onclick="CarregaDoForm()" class="btn btn-primary">Carregar dados do
+                    formulário</button>
+            </form>
+
+        </div>
+    </center>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
