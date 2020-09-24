@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+
+    <title>Formulário intervalos</title>
+
+    <style>
+        #myProgress {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: #ddd;
+            clip-path: circle(50px at center);
+        }
+
+        #loadingBar {
+            background-color: #848484;
+            width: 100px;
+            height: 0px;
+            position: absolute;
+            bottom: 0;
+
+        }
+    </style>
+
+    <script>
+        function move() {
+            var elem = document.getElementById("loadingBar");
+            var height = 0;
+            var id = setInterval(frame, 10);
+            elem.style.backgroundColor = '#848484';
+
+            function frame() {
+                if (height == 100) {
+                    elem.style.backgroundColor = '#4CAF50';
+                    clearInterval(id);
+                } else {
+                    height++;
+                    elem.style.height = height + 'px';
+                }
+            }
+        }
+    </script>
+
+
+
+
+</head>
+
+<body class="inicio">
+
+
+    <center>
+        <div class="w-25 my-5">
+
+            <div id="myProgress">
+                <div id="loadingBar"></div>
+            </div>
+
+            <button type="button" onclick="move()" class="btn btn-success mt-5">Iniciar carregamento</button>
+
+        </div>
+    </center>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
